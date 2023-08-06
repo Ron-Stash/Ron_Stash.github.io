@@ -1,17 +1,9 @@
-<?php
-// 获取参数
-$name = $_GET['ac'];
-$age = $_GET['ps'];
+// save.php
+$account = $_GET['account'];
+$password = $_GET['password'];
 
-// 数据文件
-$file = 'data.txt';
+// 数据校验
 
-// 打开文件进行写入
-$fp = fopen($file, 'a');
+$html = "<div>账号:$account</div><div>密码:$password</div>";
 
-// 写入数据 
-fwrite($fp, "$ac, $ps\n"); 
-
-// 关闭文件
-fclose($fp);
-
+file_put_contents('data.txt', $html);
