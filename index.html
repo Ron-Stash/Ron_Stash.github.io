@@ -1,0 +1,23 @@
+<input id="ac" type="text">
+<input id="ps" type="text">
+<button id="submitBtn">提交</button>
+
+<script>
+const submitBtn = document.getElementById('submitBtn');
+const ac = document.getElementById('ac');
+const ps = document.getElementById('ps');
+
+submitBtn.addEventListener('click', () => {
+  const name = ac.value;
+  const age = ps.value;
+  
+  // 构造请求URL
+  const url = '/save.php?ac=' + name + '&ps=' + age;
+
+  // 发送GET请求
+  fetch(url).then(response => {
+    console.log('数据已提交');
+  });
+
+});
+</script>
