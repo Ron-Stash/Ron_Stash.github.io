@@ -1,0 +1,382 @@
+<!-- MachineCode:5baea1ef9256901c30fb1d7a1e5b3939|3040a39ba363a68021feb4a832740bfc|c63a62dc745580dd3b88d90e1bb2760f|81eaded4a94dba6693a7e6974837b39c|7fbbf27bb7c13c23f884e8d110968ca8|af5aa6af248d075f51e1cc3066c7e18f|49e8299eea9db668f1e075230baab38d|248dff7785f0b4f11f39b0788b5ab1ff|8758bf07d76dc8572cef94b786ac6cae|60bbc13b77bfc1f9f5e37499c8e26a67|2b9b0d4d3ec345b708f725110466d644|8fd5a4073d7a2bba8f353fc3b251af3d|1f34754a648a53feac5b1a73fabd1d4c|157ce24d419eb91742986273cb3a1941|288153724ff4681dedfacb6cba0ff36a|44be745f9482b360733cfe281ba2c050|6825d60dfbdbe555df7dade6c2c84748|8ad418c4f7ea2cb66be56e895c8001a8 -->
+<!-- codeSvip:MHToolsYYDS666 -->
+<!-- codevip:8dHYfvafLC|n1HbQ8ziFA -->
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<meta charset="utf-8">  
+<title>Ron's home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Pe-7图标 -->
+<link href="static/css/pe-icon-7.css" rel="stylesheet" type="text/css"> 
+
+<!--轮播图1-->
+<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+<!-- css -->  
+<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="static/css/style.min.css" rel="stylesheet" type="text/css">
+
+<style>
+.small-img {
+  width: 20px;
+  height: 20px;
+}
+.qr-code {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    
+    opacity: 0;
+    transition: opacity 0.3s;
+  } 
+</style>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+<body>
+
+<!-- 加载动画 -->
+<div id="preloader">
+  <div id="status">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+</div>
+<!--导航栏开始-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark align-items-center">
+  <div class="container">
+    <!-- LOGO -->
+    <a class="logo mr-3" href="">
+      <img src="static/picture/logo-dark.png" alt="" class="" height="26">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="切换导航">
+      <i class="" data-feather="menu"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav navbar-center" id="mySidenav">
+        <li class="nav-item active">
+          <a href="U_index.html" class="nav-link">首页</a> 
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">关于我们</a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link">服务</a>
+        </li>
+        <li class="nav-item">
+          <a href="#features" class="nav-link">功能</a>
+        </li>
+      </ul>
+      <ul class="list-inline ml-auto menu-social-icon mb-0 py-2 py-lg-0">
+          <li class="list-inline-item ml-0">
+            <img class="small-img" src="static\icon\weixin.png" onmouseover="showQRCode(this, 'static\\icon\\qr_qq.png', 'static\\icon\\weixin1.png')">
+          </li>
+          <li class="list-inline-item">
+            <img class="small-img" src="static\icon\weibo.png" onmouseover="showQRCode(this, 'static\\icon\\qr_qq.png', 'static\\icon\\weibo1.png')">
+          </li>
+          <img class="qr-code" src="">
+      </ul>
+        
+        <script>
+          function showQRCode(img, qrcode, chengeImg) {
+            let qr = document.querySelector('.qr-code');
+            let maxLeft = window.innerWidth - qr.width - 10;
+              qr.style.left = Math.min(img.offsetLeft + img.width + 10, maxLeft) + 'px';
+              var S_src = img.src;
+              img.src = chengeImg;
+              qr.style.opacity = 1;
+              qr.src = qrcode;
+      
+              img.addEventListener('mouseout', () => {
+                qr.style.opacity = 0;
+                qr.src = ''; 
+                img.src = S_src;
+              } );
+          }
+        </script>
+    </div>
+  </div>
+</nav>
+<!-- 导航栏结束 -->
+
+<!-- 英雄区开始 -->
+<section class="hero-1-bg bg-light" style="background-image: url(static/image/hero-1-bg-img.png)" id="home">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 font-weight-medium mb-4">您好,</h1>
+        <h1 class="hero-1-title font-weight-normal text-dark mb-4">欢迎来到Ron的小屋</h1>
+        <p class="text-muted mb-4 pb-3">null</p>
+        <a href="gotopage.html" class="btn btn-primary">页面 <span class="ml-2 right-icon">&#8594;</span></a>
+      </div>
+      <div class="col-lg-6 col-md-10">
+        <div class="mt-5 mt-lg-0">
+          <img src="static/picture/hero-img.png" alt="" class="img-fluid d-block mx-auto"> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+<!-- 英雄区结束 -->
+
+<!-- 关于我们开始 -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="text-center mb-5">
+          <h2 class="">关于我们</h2>
+          <p class="text-muted">null</p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <h2 class="font-weight-normal line-height-1_4 mb-4">针对 <span class="font-weight-medium">开发者</span> 的高效和可定制化</h2>
+        <p class="text-muted mb-4">这是对我们服务的进一步说明。</p>
+        <p class="f-17 text-muted"><i class="icon-xs text-primary icon-fill-primary icon mr-2" data-feather="grid"></i> 营销项目活动</p>
+        <p class="f-17 text-muted"><i class="icon-xs text-primary icon-fill-primary icon mr-2" data-feather="layout"></i> 定制化产品</p>
+        <p class="f-17 text-muted mb-4"><i class="icon-xs text-primary icon-fill-primary icon mr-2" data-feather="monitor"></i> 提供优质服务</p>
+        <a href="#" class="read-more f-18">更多信息 <span class="ml-2 right-icon f-24">&#8594;</span></a>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-0">
+          <div class="bg-soft-primary about-img rounded">
+            <img src="static/picture/img-1.png" alt="" class="img-fluid d-block mx-auto">
+          </div>
+          <div class="mt-3">
+            <p class="text-uppercase text-muted mb-2 f-13">开发</p>
+            <h4 class="f-18">产品开发</h4>
+            <p class="text-muted">我们具有丰富的产品开发经验。</p>
+            <a href="#" class="read-more">阅读更多 <span class="ml-2 right-icon">&#8594;</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-0">
+          <div class="bg-soft-info about-img rounded">
+            <img src="static/picture/img-2.png" alt="" class="img-fluid d-block mx-auto">
+          </div>
+          <div class="mt-3">
+            <p class="text-uppercase text-muted mb-2 f-13">营销</p>
+            <h4 class="f-18">产品营销</h4>
+            <p class="text-muted">我们拥有专业的营销团队。</p>
+            <a href="#" class="read-more">阅读更多 <span class="ml-2 right-icon">&#8594;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 关于我们结束 --> 
+
+<!-- 服务开始 -->
+<section class="section bg-light" id="services">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="text-center mb-5">
+          <h2 class="">我们的服务</h2>
+          <p class="text-muted">介绍我们提供的服务。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card service-box text-center p-4">
+          <div class="service-icon-bg mx-auto avatar-xxl p-4" style="background-image: url(static/image/service-icon-bg.png)">
+            <div class="service-box-icon justify-content-center">
+              <img src="static/picture/icon-1.png" alt="" class="img-fluid d-block">
+            </div>
+          </div>
+          <h4 class="service-title mt-4 mb-3 f-18">优质支持</h4>
+          <p class="service-subtitle mb-4 f-15">啦啦啦啦啦啊</p>
+          <a href="#" class="read-more">更多<span class="right-icon ml-2">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card service-box text-center p-4">
+          <div class="service-icon-bg mx-auto avatar-xxl p-4" style="background-image: url(static/image/service-icon-bg.png)">
+            <div class="service-box-icon justify-content-center">
+              <img src="static/picture/icon-2.png" alt="" class="img-fluid d-block">
+            </div>
+          </div>
+          <h4 class="service-title mt-4 mb-3 f-18">数据分析</h4>
+          <p class="service-subtitle mb-4 f-15">啦啦啦啦啦啦</p>
+          <a href="#" class="read-more">更多<span class="right-icon ml-2">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card service-box text-center p-4">
+          <div class="service-icon-bg mx-auto avatar-xxl p-4" style="background-image: url(static/image/service-icon-bg.png)">
+            <div class="service-box-icon justify-content-center">
+              <img src="static/picture/icon-3.png" alt="" class="img-fluid d-block">
+            </div>
+          </div>
+          <h4 class="service-title mt-4 mb-3 f-18">数据隐私</h4>
+          <p class="service-subtitle mb-4 f-15">我们重视数据隐私保护。</p>
+          <a href="#" class="read-more">更多<span class="right-icon ml-2">&#8594;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 服务结束 -->
+
+<!-- 特性开始 -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="text-center mb-5">
+          <h2 class="">我们的特性</h2>
+          <p class="text-muted">介绍我们产品和服务的主要特性。</p>
+        </div>
+      </div>
+    </div>
+    <div class="features-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-work" role="tabpanel" aria-labelledby="v-pills-work-tab">
+              <img src="static/picture/img-11.png" alt="" class="img-fluid d-block mx-auto">
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-marketing" role="tabpanel" aria-labelledby="v-pills-marketing-tab">
+              <img src="static/picture/img-21.png" alt="" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="tab-pane fade" id="v-pills-feedback" role="tabpanel" aria-labelledby="v-pills-feedback-tab">
+              <img src="static/picture/img-3.png" alt="" class="img-fluid d-block mx-auto">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1  order-1 order-lg-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-work-tab" data-toggle="pill" href="#v-pills-work" role="tab" aria-controls="v-pills-work" aria-selected="true">
+              <h4 class="text-dark f-18">兼容现有应用</h4>
+              <p class="text-muted f-15">我们的产品能够兼容大多数现有应用。</p>
+              <p class="text-primary mb-0 read-more">更多信息<span class="right-icon ml-2">&#8594;</span></p>
+            </a>
+            <a class="nav-link" id="v-pills-marketing-tab" data-toggle="pill" href="#v-pills-marketing" role="tab" aria-controls="v-pills-marketing" aria-selected="false">
+              <h4 class="text-dark f-18">简单的电子邮件营销</h4>
+              <p class="text-muted f-15">我们提供便捷的邮件营销工具。</p>
+              <p class="text-primary mb-0 read-more">更多信息<span class="right-icon ml-2">&#8594;</span></p>
+            </a>
+            <a class="nav-link" id="v-pills-feedback-tab" data-toggle="pill" href="#v-pills-feedback" role="tab" aria-controls="v-pills-feedback" aria-selected="false">
+              <h4 class="text-dark f-18">获取客户反馈</h4>
+              <p class="text-muted f-15">我们提供获取客户反馈的渠道。</p>
+              <p class="text-primary mb-0 read-more">更多信息<span class="right-icon ml-2">&#8594;</span></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 特性结束 -->
+
+<!-- Footer Start -->
+<section class="footer" style="background-image: url(static/image/hero-1-bg-img.png)">
+	<div class="container">
+	  <div class="row">
+		<div class="col-lg-4">
+		  <div class="mb-5">
+			<img src="static/picture/logo-light.png" alt="" class="" height="35">
+			<p class="text-white-50 my-4">介绍文字。</p>
+			<a href="#" class="text-white-70"><i class="icon mr-1" data-feather="instagram"></i> 加入我们的Instagram</a>
+		  </div>
+		</div>
+		<div class="col-lg-7 offset-lg-1">
+		  <div class="row">
+			<div class="col-md-4">
+			  <h4 class="text-white f-22 font-weight-normal mb-3">客户</h4>
+			  <ul class="list-unstyled footer-sub-menu">
+				<li><a href="#" class="footer-link">null</a></li>
+				<li><a href="#" class="footer-link">null</a></li>
+				<li><a href="data.txt"></a></li>
+			  </ul>
+			</div>
+			<div class="col-md-4">
+			  <h4 class="text-white f-22 font-weight-normal mb-3">产品</h4>
+			  <ul class="list-unstyled footer-sub-menu">
+				<li><a href="#" class="footer-link">null</a></li>
+				<li><a href="#" class="footer-link">null</a></li>
+			  </ul>
+			</div>
+			<div class="col-md-4">
+			  <h4 class="text-white f-22 font-weight-normal mb-3">了解更多</h4>
+			  <ul class="list-unstyled footer-sub-menu">
+				<li><a href="#" class="footer-link">null</a></li>
+				<li><a href="#" class="footer-link">null</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
+  
+	  <div class="row">
+		<div class="col-lg-12">
+		  <div class="text-center mt-5">
+			<p class="text-white-50 f-15 mb-0">Copyright &copy; 2023.</p>
+			</div>
+		</div>
+	  </div>
+	</div>
+  </section>
+<!-- Footer End -->
+<!-- javascript -->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/scrollspy.min.js"></script>
+<script src="static/js/jquery.easing.min.js"></script>
+<!-- feather icons -->
+<script src="static/js/feather-icons.js"></script>
+
+<!-- carousel -->
+<script src="static/js/owl.carousel.min.js"></script>
+
+<!-- Main Js -->
+<script src="static/js/app.js"></script>
+
+<script>
+	// Fether icon
+	feather.replace()
+
+	// Testimonial
+	$('#testi-clients').owlCarousel({
+		loop: true,
+		center: true,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		margin: 20,
+		nav: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 2
+			},
+			1000: {
+				items: 3
+			}
+		}
+	})
+</script>
+
+</body>
+</html>
