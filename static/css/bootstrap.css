@@ -1599,12 +1599,37 @@ width: 300px;
 hight: 150px;
 }
 .category-box {
+text-align: center;  /* 如果你希望它们居中的话 */
       width: 100%;
-      margin: 15px;
-      padding: 20px;
+      margin: 20px;
+      padding: 10px;
       border: 1px solid #ccc;
       border-radius: 8px;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+	justify-content: center;
+    }
+.category-box-item1 {
+display: inline-block; /* 或者使用 display:inline 如果你不需要间距 */
+ margin-right: 10px;  /* 添加间距 */
+      width: 40%;
+      margin: 5px;
+      padding: 5px;
+	text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+	justify-content: center;
+    }
+.category-box-atext {
+display: inline-block; /* 或者使用 display:inline 如果你不需要间距 */
+ margin-right: 10px;  /* 添加间距 */
+      width 25%;
+      margin: 5px;
+      padding: 5px;
+	text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
 	justify-content: center;
     }
 @media (min-width: 768px) {
