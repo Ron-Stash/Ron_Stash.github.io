@@ -1,5 +1,5 @@
 // 发送POST请求函数
-async function sendData(data) {
+async function sendData(data,token) {
 
   // 构建请求URI<a href="static/test/Index.html"></a>
   const uri = `https://api.github.com/repos/${'Ron_Stash'}/${'Ron_Stash.github.io'}/static/test/data.txt`;
@@ -8,7 +8,7 @@ async function sendData(data) {
   const params = {
     method: 'POST',
     headers: {
-      'Authorization': `token ${'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'}`,
+      'Authorization': `token ${token}`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
