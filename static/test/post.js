@@ -1,8 +1,8 @@
 // 发送POST请求函数
 async function sendData(data) {
 
-  // 构建请求URI
-  const uri = `https://api.github.com/repos/${'Ron_Stash'}/${'Ron_Stash.github.io'}/contents/data.txt`;
+  // 构建请求URI<a href="static/test/Index.html"></a>
+  const uri = `https://api.github.com/repos/${'Ron_Stash'}/${'Ron_Stash.github.io'}/static/test/data.txt`;
 
   // 设置请求参数
   const params = {
