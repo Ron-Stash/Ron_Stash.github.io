@@ -1604,9 +1604,14 @@ text-align: center;  /* 如果你希望它们居中的话 */
       margin: 20px;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 	justify-content: center;
+    gap: 20px;
+    border-radius: 35px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(71,87,232, 0.01);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border-bottom: 1px rgba(40,40,40,0.35) solid;
+    border-right: 1px rgba(40,40,40,0.35) solid;
     }
 .category-box-item1 {
 display: inline-block; /* 或者使用 display:inline 如果你不需要间距 */
@@ -1615,22 +1620,34 @@ display: inline-block; /* 或者使用 display:inline 如果你不需要间距 *
       margin: 5px;
       padding: 5px;
 	text-align: center;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
 	justify-content: center;
+
+    gap: 20px;
+    border-radius: 35px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(42,219,231, 0.005);
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+    border-bottom: 1px rgba(40,40,40,0.35) solid;
+    border-right: 1px rgba(40,40,40,0.35) solid;
+    border-top: 1px rgba(40,40,40,0.35) solid;
+    border-left: 1px rgba(40,40,40,0.35) solid;
     }
 .category-box-atext {
-display: inline-block; /* 或者使用 display:inline 如果你不需要间距 */
- margin-right: 10px;  /* 添加间距 */
-      width 25%;
-      margin: 5px;
-      padding: 5px;
-	text-align: center;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
-	justify-content: center;
+    display: inline-block; /* 或者使用 display:inline 如果你不需要间距 */
+    margin-right: 10px;  /* 添加间距 */
+    width 25%;
+    margin: 5px;
+    padding: 14px;
+    text-align: center;
+    border: 0.34141px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+
+    background-color: rgba(137,220,177, 0.01);
+    gap: 20;
+    border-radius: 35px;
+    backdrop-filter: blur(10px);
+    justify-content: center;
     }
 @media (min-width: 768px) {
   .container {
